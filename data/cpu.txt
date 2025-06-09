@@ -1,0 +1,128 @@
+Intel Core i5-14600KF - R$ 1.399,99
+Intel Core i5-14600K - R$ 1.521,70
+AMD Ryzen 5 7600X - 10
+AMD Ryzen 5 7600 - R$ 1.499,99
+Intel Core i5-12400F - R$ 1.704,50
+AMD Ryzen 5 9600X - 10
+AMD Ryzen 7 9800X3D - R$ 1.319,99
+Intel Core i7-14700KF - R$ 1.475,28
+AMD Ryzen 5 5600GT - 3
+AMD Ryzen 7 7700 - R$ 1.273,01
+Intel Core i7-14700K - R$ 1.414,45
+Intel Core i9-14900K - 10
+Intel Core i5-12600KF - R$ 629,99
+Intel Core i9-12900KS - R$ 715,86
+Intel Core i5-14400F - 10
+AMD Ryzen 7 9700X - R$ 1.599,99
+Intel Core i3-14100F - R$ 1.710,34
+Intel Core i5-13400F - 10
+AMD Ryzen 5 5600 - R$ 2.743,90
+Intel Core i5-12600K - R$ 3.048,78
+Intel Core i3-12100F - 10
+Intel Core i9-14900KF - R$ 2.129,90
+AMD Ryzen 5 5600G - R$ 2.380,47
+AMD Ryzen 7 7800X3D - 3
+AMD Ryzen 3 5300G - R$ 764,99
+AMD Ryzen 7 5700G - R$ 849,96
+AMD Ryzen 5 5600T - 10
+AMD Ryzen 5 5500 - R$ 1.829,99
+AMD Ryzen 9 9900X - R$ 2.045,28
+Intel Core i5-13600K - 3
+AMD Ryzen 9 7900X - R$ 2.284,90
+Intel Core i3-13100F - R$ 2.553,72
+AMD Ryzen 5 5600X - 3
+AMD Ryzen 9 9950X3D - R$ 2.744,99
+AMD Ryzen 7 7700X - R$ 3.050,01
+AMD Ryzen 9 7900 - 10
+Intel Core i7-12700K - R$ 1.039,90
+AMD Ryzen 5 8600G - R$ 1.162,23
+Intel Core i7-13700F - 3
+Intel Core i3-13100 - R$ 1.799,99
+AMD Ryzen 7 5700X - R$ 2.045,40
+Intel Core i5-13400 - 10
+AMD Ryzen 9 9900X3D - R$ 938,08
+Intel Core i7-12700KF - 
+Intel Core i5-12400 - 
+Intel Core i9-13900KF - R$ 2.099,99
+Intel Core i5-14400 - R$ 2.470,60
+AMD Ryzen 7 5700X3D - 10
+Intel Core i9-12900K - R$ 596,14
+Intel Core i7-14700F - R$ 662,38
+Intel Core i7-14700 - 10
+AMD Ryzen 5 5600XT - R$ 888,09
+AMD Ryzen 7 8700G - R$ 986,76
+Intel Core i3-14100 - 10
+AMD Ryzen 7 5800XT - R$ 809,00
+Intel Core i5-13600KF - R$ 809,00
+Intel Core i9-14900KS - 10
+Intel Core i9-13900F - R$ 1.149,99
+Intel Core i3-12100 - R$ 1.285,29
+AMD Ryzen 9 9950X - 3
+Intel Core i9-12900KF - R$ 497,99
+AMD Ryzen 9 7950X - R$ 556,59
+AMD Ryzen 5 8400F - 3
+Intel Core i7-12700F - R$ 2.849,99
+Intel Core i7-13700 - R$ 3.166,66
+AMD Ryzen 5 8500G - 10
+AMD Ryzen 7 5700 - R$ 799,98
+Intel Core i7-13700K - R$ 894,09
+AMD Ryzen 9 5900XT - 3
+AMD Ryzen 7 5800X - R$ 2.599,99
+Intel Core i9-14900F - R$ 2.954,50
+Intel Core Ultra 7 265K - 10
+Intel Core i9-13900K - R$ 598,40
+Intel Core i7-12700 - 
+AMD Ryzen 9 7950X3D - 
+AMD Ryzen 7 8700F - R$ 895,49
+AMD Ryzen 9 7900X3D - R$ 1.053,54
+Intel Core Ultra 5 245K - 10
+Intel Core i9-13900 - R$ 899,99
+Intel Core i9-12900F - R$ 1.005,87
+AMD Ryzen 9 5900X - 3
+Intel Core i9-14900 - R$ 549,90
+Intel Core Ultra 5 245KF - R$ 572,03
+Intel Core i9-12900 - 10
+Intel Core i9-13900KS - R$ 2.599,99
+AMD Ryzen 5 3600 - R$ 3.058,80
+AMD Ryzen 7 5700X OEM - 10
+Intel Core Ultra 7 265KF - R$ 1.637,68
+AMD Ryzen 5 4500 - 
+AMD Ryzen 5 4600G - 
+AMD Ryzen 9 5950X - R$ 2.229,90
+AMD Ryzen 3 4100 - R$ 2.492,25
+AMD Ryzen 7 3700X - 3
+Intel Core Ultra 9 285K - R$ 599,90
+AMD Ryzen 5 3600X - R$ 670,47
+AMD Ryzen 5 3500X - 3
+AMD Ryzen 5 3600XT - R$ 938,08
+Intel Pentium Gold G7400 - 
+AMD Ryzen 9 3900X - 
+Intel Core i5-10600KA - R$ 4.699,90
+AMD Ryzen 7 3800X - R$ 5.252,82
+Intel Core i5-10600K - 3
+AMD Ryzen 7 3800XT - R$ 2.029,99
+Intel Core i5-11400 - R$ 2.268,81
+Intel Core i5-11500 - 3
+Intel Core i5-11400F - R$ 2.219,90
+AMD Ryzen 9 3950X - R$ 2.481,06
+Intel Core i5-10600KF - 3
+Intel Core i5-10400 - R$ 1.529,99
+Intel Core i5-10400F - R$ 1.700,01
+Intel Core i5-10400F OEM - 10
+Intel Core i9-11900K - R$ 1.255,00
+Intel Core i3-10105 - R$ 1.394,44
+Intel Core i3-10100 - 10
+Intel Core i9-11900KF - R$ 1.859,90
+Intel Core i7-11700KF - R$ 2.078,70
+Intel Core i9-10850K - 3
+Intel Core i3-10105F - R$ 699,99
+Intel Core i3-10100F - R$ 782,34
+Intel Core i7-11700F - 3
+Intel Core i7-11700 - R$ 1.061,99
+Intel Pentium Gold G6405 - R$ 1.206,81
+Intel Core i9-10900F - 10
+Intel Core i9-10900 - R$ 1.099,99
+Intel Core i7-10700KA - R$ 1.250,00
+Intel Core i7-10700KF - 10
+Intel Core i7-10700K - R$ 3.999,90
+Intel Core i7-10700F - R$ 4.470,48
