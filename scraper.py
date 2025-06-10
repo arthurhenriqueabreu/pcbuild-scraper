@@ -1,13 +1,16 @@
-import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.options import Options
+import json
+import time
+import os
 
-# Configura o driver Chrome (garanta que chromedriver está no PATH)
-driver = webdriver.Chrome()
+# Inicializar Selenium (modo headless opcional)
+options = Options()
+options.add_argument('--headless')  # Remova essa linha se quiser ver o navegador
+driver = webdriver.Chrome(options=options)
 
-urls = {
+categorias = {
     "cpu": "https://www.pcbuildwizard.com/product/cpu",
     "gpu": "https://www.pcbuildwizard.com/product/video-card",
     "ram": "https://www.pcbuildwizard.com/product/memory",
@@ -17,37 +20,81 @@ urls = {
     "case": "https://www.pcbuildwizard.com/product/case"
 }
 
-if not os.path.exists("data"):
-    os.mkdir("data")
+# Criar pasta de saída
+os.makedirs("data_json", exist_ok=True)
 
-for category, url in urls.items():
-    print(f"Visitando categoria: {category} - {url}")
-    driver.get(url)
-
+# Função para limpar e converter preço para float
+def preco_para_float(preco_str):
+    preco_limpo = preco_str.replace("R$", "").replace(".", "").replace(",", ".").strip()
     try:
-        # Espera até que pelo menos um produto seja carregado na página
-        WebDriverWait(driver, 15).until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, "span.description-cell"))
-        )
+        return float(preco_limpo)
+    except:
+        return None
 
-        # Busca todos os nomes e preços
-        nomes = driver.find_elements(By.CSS_SELECTOR, "span.description-cell")
-        precos = driver.find_elements(By.CSS_SELECTOR, "td.price-cell.mud-table-cell")
+# Dicionário com todos os produtos
+dados_completos = {}
 
-        if len(nomes) != len(precos):
-            print(f"Atenção: número diferente de nomes ({len(nomes)}) e preços ({len(precos)}) na categoria {category}")
+for categoria, url in categorias.items():
+    print(f"\n🔎 Visitando categoria: {categoria} - {url}")
+    driver.get(url)
+    time.sleep(2)
 
-        produtos = []
-        for nome, preco in zip(nomes, precos):
-            produtos.append(f"{nome.text.strip()} - {preco.text.strip()}")
+    # Scroll até que todos os produtos sejam carregados
+    prev_count = -1
+    while True:
+        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        time.sleep(2)
+        linhas = driver.find_elements(By.CSS_SELECTOR, "tr.mud-table-row")
+        if len(linhas) == prev_count:
+            break
+        prev_count = len(linhas)
 
-        caminho_arquivo = f"data/{category}.txt"
-        with open(caminho_arquivo, "w", encoding="utf-8") as arquivo:
-            arquivo.write("\n".join(produtos))
+    print(f"📦 {len(linhas)} produtos encontrados")
 
-        print(f"Salvo {len(produtos)} produtos em {caminho_arquivo}")
+    produtos = []
+    for linha in linhas:
+        try:
+            nome = linha.find_element(By.CSS_SELECTOR, ".description-cell").text.strip()
+        except:
+            nome = ""
 
-    except Exception as e:
-        print(f"Erro na categoria {category}: {e}")
+        try:
+            detalhes = linha.find_element(By.CSS_SELECTOR, ".details-cell").text.strip()
+        except:
+            detalhes = ""
 
+        try:
+            precos = linha.find_elements(By.CSS_SELECTOR, ".price-cell")
+            preco_avista = preco_para_float(precos[0].text.strip()) if len(precos) > 0 else None
+            preco_parcelado = preco_para_float(precos[1].text.strip()) if len(precos) > 1 else None
+            parcelas = precos[2].text.strip() if len(precos) > 2 else ""
+        except:
+            preco_avista = preco_parcelado = None
+            parcelas = ""
+
+        try:
+            cupom = linha.find_element(By.CSS_SELECTOR, '[data-label="Cupom"]').text.strip()
+        except:
+            cupom = ""
+
+        produto = {
+            "Nome": nome,
+            "Detalhes": detalhes,
+            "Preco_avista": preco_avista,
+            "Preco_parcelado": preco_parcelado,
+            "Parcelas": parcelas,
+            "Cupom": cupom
+        }
+
+        produtos.append(produto)
+
+    dados_completos[categoria] = produtos
+    print(f"✅ Salvo {len(produtos)} produtos da categoria {categoria}")
+
+# Salvar em JSON
+json_path = "data_json/produtos_pcbuildwizard.json"
+with open(json_path, "w", encoding="utf-8") as f:
+    json.dump(dados_completos, f, indent=2, ensure_ascii=False)
+
+print(f"\n💾 Dados salvos em: {json_path}")
 driver.quit()
